@@ -10,7 +10,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      song:{
+      user:{
         id:data.data.id,
         name:data.data.name
       }
@@ -35,11 +35,11 @@ return {
 
 }
 
-export default ({ song }) => (
+export default ({ user }) => (
   <div >
-    <h1>{song.name}</h1>
+    <h1>{user.name}</h1>
     <p >
-      {song.name}
+      {user.name}
     </p>
     
     <NextLink href="/" passHref>
